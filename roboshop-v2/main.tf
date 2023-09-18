@@ -1,3 +1,4 @@
+/*
 variable "ami" {
     default = "ami-03265a0778a880afb"
 }
@@ -13,12 +14,12 @@ variable "security_groups" {
 variable "zone_id" {
     default = "Z045851830X54L3IRT9GH"
 }
-
+*/
 
 resource "aws_instance" "frontend" {
-  ami           = var.ami
-  instance_type = var.instance_type
-  vpc_security_group_ids = var.security_groups
+  ami           = "ami-03265a0778a880afb"
+  instance_type = "t3.micro"
+  vpc_security_group_ids = "sg-0d3e4cc237236453f"
 
   tags = {
     Name = "frontend"
@@ -26,7 +27,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = var.zone_id
+  zone_id = "Z045851830X54L3IRT9GH"
   name    = "frontend-akhildevops.online"
   type    = "A"
   ttl     = 30
