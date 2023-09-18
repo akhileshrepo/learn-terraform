@@ -2,7 +2,7 @@ variable "fruits" {
     default = ["apple", "banana"]
 }
 
-variable "fruit" {
+output "fruit" {
     //value = var.fruits[3]
     value = element(var.fruits, 2)
 }
