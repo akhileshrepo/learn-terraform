@@ -9,5 +9,5 @@ output "fruit_name" {
 
 # List variable
 variable "fruits" {
-    default = ["apple", "banana", "Mango']
+    default = ["apple", "banana", "Mango"]
 }
