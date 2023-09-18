@@ -65,7 +65,7 @@ variable "fruit_details" {
 #variable in combination of any string it needs to be in ${}
 
 output "fruit_name_1" {
-    value = "Fruit Name" = ${var.fruit_name}
+    value = "Fruit Name" = "${var.fruit_name}"
 }
 
 output "fruit_details_apple" {
