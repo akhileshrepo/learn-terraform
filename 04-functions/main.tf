@@ -18,6 +18,7 @@ output "first-stock" {
 }
 
 output "fruit_stock_price" {
-    value = lookup(var.fruit_with_stock["apple"], "price", 2)
-        //try(var.fruit_with_stock["apple"].price, 2)
+    value = try(var.fruit_with_stock["apple"].price, 2)
+      
+        //lookup(var.fruit_with_stock["apple"], "price", 2)
 }
