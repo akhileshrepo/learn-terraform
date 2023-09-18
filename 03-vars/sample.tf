@@ -12,11 +12,11 @@ variable "fruits" {
     default = ["apple", "banana", "Mango']
 }
 
-# Map variable, plain
+# Map variable plain
 variable "fruit_stock" {
     default = {
-        apple=100
-        banana=209
+        apple = 100
+        banana = 209
     }
 }
 
