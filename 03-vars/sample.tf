@@ -43,9 +43,31 @@ output "fruits_second" {
 }
 
 ## Access a Map variable
+
 output "fruit_stock_apple" {
     value = var.fruit_stock["apple"]
 }
-
 output "fruit_stock_with_price_apple"
     value = var.fruit_stock_with_price["apple"].stock
+
+#variable data types
+
+variable "fruit_details" {
+    default = {
+        apple = {
+            stock = 100   ##Number
+            type = "washington"    ##string
+            for_sale = true     ##Boolean
+        }
+    }
+}
+
+#variable in combination of any string it needs to be in ${}
+
+output "fruit_name_1" {
+    value = "Fruit Name = ${var.fruit_name}
+}
+
+output "fruit_details_apple" {
+    value = "Apple stock = ${var.fruit_details[apple].stock} , Apple Type = ${var.fruit_details[apple].type} , Apple sale status = ${var.fruit_details[apple].for_sale}"
+}
