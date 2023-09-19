@@ -47,5 +47,5 @@ resource "aws_route53_record" "record" {
   name    = "${lookup(each.value, "name", null)}.akhildevops.online"
   type    = "A"
   ttl     = 30
-  records = [lookup(lookup(aws_instance.instance,each.key, null), "private-ip", null)]
+  records = [lookup(lookup(aws_instance.instance,each.key, null), "private_ip", null)]
 }
