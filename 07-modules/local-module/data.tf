@@ -5,7 +5,7 @@ data "aws_ami" "ami" {
 }
 
 output "ami" {
-    value = data.aws_ami_ids.ami
+    value = data.aws_ami.ami
 }
 
 resource "aws_instance" "instance" {
