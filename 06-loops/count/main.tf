@@ -1,7 +1,7 @@
 variable "components" {
     default = [ "redis", "mongodb", "catalogue"]
 }
-/*
+
 resource "aws_instance" "instance" {
     count = length(var.components)
     ami = "ami-03265a0778a880afb"
@@ -12,7 +12,7 @@ resource "aws_instance" "instance" {
         Name = element(var.components, count.index)
     }
 }
-*/
+
 
 resource "aws_security_group" "allow_tls" {
     count = length(var.components)
