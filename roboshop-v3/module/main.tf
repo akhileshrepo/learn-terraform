@@ -1,12 +1,14 @@
 resource "aws_instance" "instance" {
-  ami           = data.aws_ami.ami.id
-  instance_type = var.instance_type
+  ami                    = data.aws_ami.ami.id
+  instance_type          = var.instance_type
   vpc_security_group_ids = var.security_groups
 
   tags = {
     Name = var.name
   }
+
 }
+
 
 resource "aws_route53_record" "record" {
   zone_id = var.zone_id
@@ -17,9 +19,11 @@ resource "aws_route53_record" "record" {
 }
 
 resource "null_resource" "ansible" {
+
   depends_on = [
     aws_route53_record.record
   ]
+
   provisioner "local-exec" {
     command = <<EOF
 cd /home/centos/roboshop-ansible
@@ -29,4 +33,3 @@ ansible-playbook -i ${var.name}-dev.akhildevops.online, main.yml -e ansible_user
 EOF
   }
 }
-
