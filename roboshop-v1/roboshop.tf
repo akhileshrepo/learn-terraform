@@ -9,7 +9,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_route53_record" "frontend" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "frontend-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -27,7 +27,7 @@ resource "aws_instance" "mongodb" {
 }
 
 resource "aws_route53_record" "mongodb" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "mongodb-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -45,7 +45,7 @@ resource "aws_instance" "catalogue" {
 }
 
 resource "aws_route53_record" "catalogue" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "catalogue-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -63,7 +63,7 @@ resource "aws_instance" "cart" {
 }
 
 resource "aws_route53_record" "cart" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "cart-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -81,7 +81,7 @@ resource "aws_instance" "redis" {
 }
 
 resource "aws_route53_record" "redis" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "redis-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -99,7 +99,7 @@ resource "aws_instance" "user" {
 }
 
 resource "aws_route53_record" "user" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "user-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -117,7 +117,7 @@ resource "aws_instance" "mysql" {
 }
 
 resource "aws_route53_record" "mysql" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "mysql-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -135,7 +135,7 @@ resource "aws_instance" "shipping" {
 }
 
 resource "aws_route53_record" "shipping" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "shipping-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -154,7 +154,7 @@ resource "aws_instance" "rabbitmq" {
 }
 
 resource "aws_route53_record" "rabbitmq" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "rabbitmq-akhildevops.online"
   type    = "A"
   ttl     = 30
@@ -173,7 +173,7 @@ resource "aws_instance" "payment" {
 }
 
 resource "aws_route53_record" "payment" {
-  zone_id = "Z045851830X54L3IRT9GH"
+  zone_id = "Z0929615AH1MSD5PXATC"
   name    = "payment-akhildevops.online"
   type    = "A"
   ttl     = 30
