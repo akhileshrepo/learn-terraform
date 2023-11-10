@@ -1,3 +1,4 @@
+/*
 # plain value
 variable "fruit_name" {
     default = "apple"
@@ -6,14 +7,14 @@ variable "fruit_name" {
 output "fruit_name" {
     value = var.fruit_name
 }
+*/
 
-/*
 # List variable
 variable "fruits" {
     default = ["apple", "banana", "Mango"]
 }
 
-
+/*
 # Map variable plain
 variable "fruit_stock"{
     default = { apple = 100, banana = 209}
