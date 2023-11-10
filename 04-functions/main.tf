@@ -3,7 +3,7 @@ variable "fruits" {
 }
 
 output "fruit" {
-    //value = var.fruits[3]
+    //value = var.fruits[2]  ## It will throw a syntax error
     value = element(var.fruits, 2)
 }
 
