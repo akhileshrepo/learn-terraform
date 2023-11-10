@@ -1,4 +1,4 @@
-/*
+
 # plain value
 variable "fruit_name" {
     default = "apple"
@@ -17,7 +17,7 @@ output "fruits" {
     value = var.fruits
 }
 
-*/
+
 
 
 # Map variable plain
@@ -39,11 +39,9 @@ variable "fruit_stock_with_price" {
     }
 }
 
-output "fruits" {
-    value = var.fruit_stock_with_price
-}
 
-/*
+
+
 ## Access list variable, list index starts from zero
 output "fruits_first" {
     value = var.fruits[0]
@@ -84,4 +82,4 @@ output "fruit_details_apple" {
     value = "Apple stock = ${var.fruit_details["apple"].stock} , Apple Type = ${var.fruit_details["apple"].type} , Apple sale status = ${var.fruit_details["apple"].for_sale}"
 }
 
-*/
+
