@@ -14,6 +14,9 @@ variable "fruits" {
     default = ["apple", "banana", "Mango"]
 }
 
+output "fruits" {
+    value = var.fruits
+}
 /*
 # Map variable plain
 variable "fruit_stock"{
