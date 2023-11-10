@@ -39,6 +39,9 @@ variable "fruit_stock_with_price" {
     }
 }
 
+output "fruits" {
+    value = var.fruit_stock_with_price
+}
 
 /*
 ## Access list variable, list index starts from zero
@@ -81,4 +84,4 @@ output "fruit_details_apple" {
     value = "Apple stock = ${var.fruit_details["apple"].stock} , Apple Type = ${var.fruit_details["apple"].type} , Apple sale status = ${var.fruit_details["apple"].for_sale}"
 }
 
-    
+*/
