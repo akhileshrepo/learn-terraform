@@ -1,5 +1,5 @@
 variable "components" {
-    default = ["shipping", "user", "mongodb", "catalogue", "frontend"]
+    default = ["shipping", "user", "mongodb", "catalogue"]
 }
 
 /*
