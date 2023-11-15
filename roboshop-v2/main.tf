@@ -1,17 +1,17 @@
 variable "ami" {
-    default = "ami-03265a0778a880afb"
+  default = "ami-03265a0778a880afb"
 }
 
 variable "instance_type" {
-    default = "t3.micro"
+  default = "t2.micro"
 }
 
 variable "security_groups" {
-  default     = ["sg-0d3e4cc237236453f"]
+  default     = ["sg-0e9e01d2f78b0dd9a"]
 }
 
 variable "zone_id" {
-    default = "Z045851830X54L3IRT9GH"
+  default = "Z0929615AH1MSD5PXATC"
 }
 
 variable "components" {
