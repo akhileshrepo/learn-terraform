@@ -12,7 +12,7 @@ resource "aws_instance" "instance" {
 
 resource "aws_route53_record" "record" {
   zone_id = var.zone_id
-  name    = "${var.name}-dev.rdevopsb72.online"
+  name    = "${var.name}-dev.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.instance.private_ip]
