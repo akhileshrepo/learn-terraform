@@ -1,5 +1,5 @@
 module "test" {
-    source = "./local-module"
+    source        = "./local-module"
     instance_type = var.instance_type
 }
 
@@ -8,5 +8,5 @@ output "test" {
 }
 
 variable "instance_type" {
-    default = "t2.micro"
+    default = "t3.micro"
 }

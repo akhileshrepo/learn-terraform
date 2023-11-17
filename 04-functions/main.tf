@@ -3,22 +3,23 @@ variable "fruits" {
 }
 
 output "fruit" {
-    //value = var.fruits[2]  ## It will throw a syntax error
+    //value = var.fruits[2]
     value = element(var.fruits, 2)
 }
 
 variable "fruit_with_stock" {
     default = {
-        apple = 30
+        apple = {
+            stock = 100
+        }
     }
 }
 
-output "first-stock" {
+output "fruit_stock" {
     value = try(var.fruit_with_stock["banana"], 0)
 }
 
 output "fruit_stock_price" {
-    value = try(var.fruit_with_stock["apple"].price, 2)
-      
-        //lookup(var.fruit_with_stock["apple"], "price", 2)
+    value = lookup(var.fruit_with_stock["apple"], "price", 2)
+    // try(var.fruit_with_stock["apple"].price, 2)
 }

@@ -1,18 +1,15 @@
 terraform {
-    backend "s3" {
-      bucket = "firstbucket.akhil"
-      key = "09-state/terraform.tfstate"
-      region = "us-east-1"
-    }
-    
+  backend "s3" {
+    bucket = "tf-state-db74"
+    key    = "09-state/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
-
 variable "test" {
-    default = "Hello"
+  default = "Hello"
 }
 
 output "test" {
-    value = var.test
+  value = var.test
 }
-
