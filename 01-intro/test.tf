@@ -1,4 +1,4 @@
-output "test" {
-    value = "Hello world"
+output "validate" {
+    value = "Akhilesh from Tata"
 }
 
