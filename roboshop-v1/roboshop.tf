@@ -11,7 +11,7 @@ resource "aws_instance" "frontend" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = "Z0929615AH1MSD5PXATC"
-  name    = "frontend-dev.akhildevops.online"
+  name    = "frontend.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.frontend.private_ip]
@@ -29,7 +29,7 @@ resource "aws_instance" "mongodb" {
 
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z0929615AH1MSD5PXATC"
-  name    = "mongodb-dev.akhildevops.online"
+  name    = "mongodb.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.mongodb.private_ip]
@@ -47,7 +47,7 @@ resource "aws_instance" "catalogue" {
 
 resource "aws_route53_record" "catalogue" {
   zone_id = "Z0929615AH1MSD5PXATC"
-  name    = "catalogue-dev.akhildevops.online"
+  name    = "catalogue.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.catalogue.private_ip]
@@ -65,7 +65,7 @@ resource "aws_instance" "cart" {
 
 resource "aws_route53_record" "cart" {
   zone_id = "Z0929615AH1MSD5PXATC"
-  name    = "cart-dev.akhildevops.online"
+  name    = "cart.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.cart.private_ip]
@@ -83,7 +83,7 @@ resource "aws_instance" "redis" {
 
 resource "aws_route53_record" "redis" {
   zone_id = "Z0929615AH1MSD5PXATC"
-  name    = "redis-dev.akhildevops.online"
+  name    = "redis.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.redis.private_ip]
@@ -101,7 +101,7 @@ resource "aws_instance" "user" {
 
 resource "aws_route53_record" "user" {
   zone_id = "Z0929615AH1MSD5PXATC"
-  name    = "user-dev.akhildevops.online"
+  name    = "user.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.user.private_ip]
