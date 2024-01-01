@@ -104,5 +104,5 @@ resource "aws_route53_record" "user" {
   name    = "user-dev.akhildevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.redis.private_ip]
+  records = [aws_instance.user.private_ip]
 }
