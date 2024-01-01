@@ -8,6 +8,7 @@ resource "aws_instance" "frontend" {
   }
 }
 
+
 resource "aws_route53_record" "frontend" {
   zone_id = "Z0929615AH1MSD5PXATC"
   name    = "frontend-dev.akhildevops.online"
