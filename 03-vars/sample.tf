@@ -3,11 +3,11 @@ variable "fruit_name" {
     default = "apple"
 }
 
-output "fruit_name" {
-    value = var.fruit_name
+output "fruits" {
+    value = var.fruits
 }
 
-/*
+
 # List Variable
 variable "fruits" {
     default = [
@@ -16,6 +16,8 @@ variable "fruits" {
     ]
     // default = [ "apple", "banana" ] // Single line syntax
 }
+
+
 
 # Map Variable , Plain
 variable "fruit_stock" {
