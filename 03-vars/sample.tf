@@ -4,7 +4,7 @@ variable "fruit_name" {
 }
 
 output "fruit_stock" {
-    value = var.fruits
+    value = var.fruit_stock
 }
 
 
