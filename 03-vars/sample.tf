@@ -4,7 +4,7 @@ variable "fruit_name" {
 }
 
 output "fruit_stock" {
-    value = var.fruit_stock
+    value = var.fruit_stock_with_price
 }
 
 
@@ -29,7 +29,7 @@ variable "fruit_stock" {
     }
 }
 
-/*
+
 # Map Variable, Map of Maps
 variable "fruit_stock_with_price" {
     default = {
@@ -44,6 +44,7 @@ variable "fruit_stock_with_price" {
     }
 }
 
+/*
 ## Access a list variable, List index starts from zero
 output "fruits_first" {
     value = var.fruits[0]
