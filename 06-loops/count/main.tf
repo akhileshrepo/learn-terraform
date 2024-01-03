@@ -1,5 +1,5 @@
 variable "components" {
-    default = ["catalogue", "frontend", "mongodb"]
+    default = ["frontend", "mongodb", "catalogue"]
 }
 
 //resource "aws_instance" "instance" {
