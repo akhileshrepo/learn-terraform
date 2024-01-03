@@ -10,11 +10,13 @@ output "fruits" {
 
 # List Variable
 variable "fruits" {
+    /*
     default = [
         "apple",
         "banana"
     ]
-    // default = [ "apple", "banana" ] // Single line syntax
+    */
+     default = [ "apple", "banana" ] // Single line syntax
 }
 
 
