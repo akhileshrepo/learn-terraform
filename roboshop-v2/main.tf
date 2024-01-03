@@ -3,7 +3,7 @@ variable "ami" {
 }
 
 variable "security_groups" {
-  default = ["sg-0dee954b08055e577"]
+  default = ["sg-0e9e01d2f78b0dd9a"]
 }
 
 variable "instance_type" {
