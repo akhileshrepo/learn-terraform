@@ -55,7 +55,7 @@ output "fruits_second" {
     value = var.fruits[1]
 }
 
-/*
+
 
 ## Access a Map Variable
 output "fruit_stock_apple" {
@@ -66,6 +66,7 @@ output "fruit_stock_with_price_of_apple" {
     value = var.fruit_stock_with_price["apple"].stock
 }
 
+/*
 # Variable Data Types
 variable "fruit_details" {
     default = {
