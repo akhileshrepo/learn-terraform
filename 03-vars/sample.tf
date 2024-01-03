@@ -3,7 +3,7 @@ variable "fruit_name" {
     default = "apple"
 }
 
-output "fruits" {
+output "fruit_stock" {
     value = var.fruits
 }
 
@@ -20,7 +20,7 @@ variable "fruits" {
 }
 
 
-/*
+
 # Map Variable , Plain
 variable "fruit_stock" {
     default = {
@@ -29,6 +29,7 @@ variable "fruit_stock" {
     }
 }
 
+/*
 # Map Variable, Map of Maps
 variable "fruit_stock_with_price" {
     default = {
