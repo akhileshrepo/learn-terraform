@@ -18,7 +18,7 @@ variable "fruits" {
 }
 
 
-
+/*
 # Map Variable , Plain
 variable "fruit_stock" {
     default = {
