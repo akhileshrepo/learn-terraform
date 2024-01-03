@@ -7,11 +7,11 @@ variable "security_groups" {
 }
 
 variable "instance_type" {
-  default = "t3.small"
+  default = "t2.micro"
 }
 
 variable "zone_id" {
-  default = "Z0021413JFIQEJP9ZO9Z"
+  default = "Z0929615AH1MSD5PXATC"
 }
 
 variable "components" {
