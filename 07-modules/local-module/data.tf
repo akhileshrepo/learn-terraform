@@ -8,6 +8,7 @@ output "ami" {
   value = data.aws_ami.ami
 }
 
+/*
 resource "aws_instance" "instance" {
   ami                    = data.aws_ami.ami.id
   instance_type          = var.instance_type
@@ -15,3 +16,5 @@ resource "aws_instance" "instance" {
 }
 
 variable "instance_type" {}
+
+*/
