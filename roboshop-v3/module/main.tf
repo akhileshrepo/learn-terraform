@@ -11,15 +11,12 @@ resource "aws_instance" "instance" {
 
 resource "aws_route53_record" "record" {
   zone_id  = var.zone_id
-  name     = var.name
+  name     = "${var.name}-dev.akhildevops.online"
   type     = "A"
   ttl      = 30
   records  = [aws_instance.instance.private_ip]
 }
 
-
-
-/*
 
 
 resource "null_resource" "ansible" {
@@ -38,4 +35,3 @@ EOF
   }
 }
 
-*/
