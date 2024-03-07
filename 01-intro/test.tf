@@ -1,4 +1,4 @@
 output "validate" {
-    value = "GCP is a Good"
+    value = "Akhilesh is SRE"
 }
 
