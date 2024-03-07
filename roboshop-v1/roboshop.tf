@@ -106,3 +106,75 @@ resource "aws_route53_record" "user" {
   ttl     = 30
   records = [aws_instance.user.private_ip]
 }
+
+resource "aws_instance" "rabbitmq" {
+  ami                    = "ami-0f3c7d07486cad139"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = ["sg-0e9e01d2f78b0dd9a"]
+
+  tags = {
+    Name = "rabbitmq"
+  }
+}
+
+resource "aws_route53_record" "rabbitmq" {
+  zone_id = "Z0929615AH1MSD5PXATC"
+  name    = "rabbitmq-dev.akhildevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.user.private_ip]
+}
+
+resource "aws_instance" "mysql" {
+  ami                    = "ami-0f3c7d07486cad139"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = ["sg-0e9e01d2f78b0dd9a"]
+
+  tags = {
+    Name = "mysql"
+  }
+}
+
+resource "aws_route53_record" "mysql" {
+  zone_id = "Z0929615AH1MSD5PXATC"
+  name    = "mysql-dev.akhildevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.user.private_ip]
+}
+
+resource "aws_instance" "payment" {
+  ami                    = "ami-0f3c7d07486cad139"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = ["sg-0e9e01d2f78b0dd9a"]
+
+  tags = {
+    Name = "payment"
+  }
+}
+
+resource "aws_route53_record" "payment" {
+  zone_id = "Z0929615AH1MSD5PXATC"
+  name    = "payment-dev.akhildevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.user.private_ip]
+}
+
+resource "aws_instance" "shipping" {
+  ami                    = "ami-0f3c7d07486cad139"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = ["sg-0e9e01d2f78b0dd9a"]
+
+  tags = {
+    Name = "shipping"
+  }
+}
+
+resource "aws_route53_record" "shipping" {
+  zone_id = "Z0929615AH1MSD5PXATC"
+  name    = "shipping-dev.akhildevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.user.private_ip]
+}
