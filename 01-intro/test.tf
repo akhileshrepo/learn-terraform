@@ -1,4 +1,4 @@
 output "validate" {
-    value = "Akhilesh from Tata"
+    value = "GCP is a Good"
 }
 
