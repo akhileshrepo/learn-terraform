@@ -8,7 +8,7 @@ output "fruit_name" {
     value = var.fruit_name
 }
 
--------------------------------------------------------------------------------------------------
+
 /*
 # List Variable
 variable "fruits" {
