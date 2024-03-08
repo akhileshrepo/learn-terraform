@@ -66,7 +66,7 @@ output "fruit_stock_with_price_of_apple" {
     value = var.fruit_stock_with_price["apple"].stock
 }
 
-*/
+
 
 
 
@@ -91,3 +91,24 @@ output "fruit_details_apple" {
     value = "Apple Stock = ${var.fruit_details["apple"].stock} , Apple Type = ${var.fruit_details["apple"].type}, Apple Sale Status = ${var.fruit_details["apple"].for_sale}"
 }
 
+*/
+
+
+variable "exam" {
+    default = {
+        Telugu = {
+            marks = 80
+            percentage = 75
+            Remarks = "pass"
+        }
+        Hindi = {
+            marks = 60
+            percentage = 40
+            Remarks = "Fail"
+        }
+    }
+}
+
+output "Telugu-marks" {
+    value = "Akhilesh marks = ${var.exam["Telugu"].marks}"
+}
