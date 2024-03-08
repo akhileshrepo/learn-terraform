@@ -4,7 +4,7 @@ variable "fruits" {
 
 
 output "fruit" {
-    value = var.fruits[1]
+    value = var.fruits[8]
     //value = element(var.fruits, 5)
 }
 
