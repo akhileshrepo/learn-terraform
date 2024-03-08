@@ -94,21 +94,3 @@ output "fruit_details_apple" {
 */
 
 
-variable "exam" {
-    default = {
-        Telugu = {
-            marks = 80
-            percentage = 75
-            Remarks = "pass"
-        }
-        Hindi = {
-            marks = 60
-            percentage = 40
-            Remarks = "Fail"
-        }
-    }
-}
-
-output "Akhilesh-marks" {
-    value = "Telugu-Marks = ${var.exam["Telugu"].marks}"
-}
