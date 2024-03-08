@@ -3,13 +3,13 @@ variable "fruit_name" {
     default = "apple"
 }
 
-/*
-output "fruit_stock_with_price" {
-    value = var.fruit_stock_with_price["banana"].stock
+
+output "fruit_name" {
+    value = var.fruit_name
 }
-*/
 
-
+-------------------------------------------------------------------------------------------------
+/*
 # List Variable
 variable "fruits" {
     default = [
@@ -88,3 +88,4 @@ output "fruit_details_apple" {
     value = "Apple Stock = ${var.fruit_details["apple"].stock} , Apple Type = ${var.fruit_details["apple"].type}, Apple Sale Status = ${var.fruit_details["apple"].for_sale}"
 }
 
+*/
