@@ -109,6 +109,6 @@ variable "exam" {
     }
 }
 
-output "Telugu-marks" {
-    value = "Akhilesh marks = ${var.exam["Telugu"].marks}"
+output "Akhilesh-marks" {
+    value = "Telugu-Marks = ${var.exam["Telugu"].marks}"
 }
