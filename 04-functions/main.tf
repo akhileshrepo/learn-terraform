@@ -4,8 +4,8 @@ variable "fruits" {
 
 
 output "fruit" {
-    value = var.fruits[8]
-    //value = element(var.fruits, 5)
+    //value = var.fruits[8]
+    value = element(var.fruits, 8)
 }
 
 
