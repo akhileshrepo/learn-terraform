@@ -13,12 +13,14 @@ variable "fruit_with_stock" {
     default = {
         apple = {
             stock = 100
+            price =0
         }
     }
 }
 
 output "test" {
-    value = try(var.fruit_with_stock["apple"].stock, 0)
+    //value = try(var.fruit_with_stock["apple"].stock, 0)
+    value = lookup(var.fruit_with_stock["apple"], "price", 100
 }
 
 
