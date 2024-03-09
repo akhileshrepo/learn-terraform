@@ -15,7 +15,7 @@ variable "fruits" {
      //default = [ "apple", "banana" ] // Single line syntax
 }
 
-output "fruit_names_2" {
+output "fruit_name_2" {
     value = var.fruits
 }
 
