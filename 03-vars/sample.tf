@@ -3,7 +3,7 @@ variable "fruit_name" {
     default = "apple"
 }
 
-output "fruit_name" {
+output "fruit_name_1" {
     value = var.fruit_name
 }
 
@@ -18,6 +18,9 @@ variable "fruits" {
      //default = [ "apple", "banana" ] // Single line syntax
 }
 
+output "fruit_names_2" {
+    value = var.fruits
+}
 
 
 # Map Variable , Plain
