@@ -16,36 +16,33 @@ variable "zone_id" {
 
 variable "components" {
   default = {
-    frontend  = { name = "frontend-dev" }
-    catalogue = { name = "catalogue-dev" }
-    mongodb   = { name = "mongodb-dev" }
-    user      = { name = "user-dev" }
-    redis     = { name = "redis-dev" }
-    cart      = { name = "cart-dev" }
-    mysql     = { name = "mysql-dev" }
-    shipping  = { name = "shipping-dev" }
-    payment   = { name = "payment-dev" }
-    rabbitmq  = { name = "rabbitmq-dev" }
+    frontend = {}
+    mongodb = {}
+    catalogue = {}
+    redis = {}
+    user = {}
+    cart = {}
+    rabbitmq = {}
+    mysql = {}
+    shipping = {}
+    payment = {}
   }
 }
 
+
+
 resource "aws_instance" "instance" {
-  for_each               = var.components
   ami                    = var.ami
   instance_type          = var.instance_type
   vpc_security_group_ids = var.security_groups
 
+  for_each = var.components
+
   tags = {
-    Name = lookup(each.value, "name", null)
+    Name = lookup(each.key, null)
   }
 }
 
-
-resource "aws_route53_record" "record" {
-  for_each = var.components
-  zone_id  = var.zone_id
-  name     = "${lookup(each.value, "name", null)}.akhildevops.online"
-  type     = "A"
-  ttl      = 30
-  records  = [lookup(lookup(aws_instance.instance, each.key, null), "private_ip", null)]
+output "instance" {
+  value = aws_instance.instance
 }
