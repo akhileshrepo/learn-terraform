@@ -8,7 +8,7 @@ variable "components" {
 }
 
 
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "allow_sg" {
     for_each = var.components
-    name     = lookup(each.value, "name", null)
+    name = each.value["name"]
 }
