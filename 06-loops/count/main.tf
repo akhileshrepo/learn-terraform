@@ -1,8 +1,8 @@
 variable "components" {
-    default = ["shipping", "catalogue", "frontend", "mongodb"]
+    default = ["frontend", "mongodb"]
 }
 
-/*
+
 resource "aws_instance" "instance" {
 
   count = length(var.components)
@@ -16,7 +16,7 @@ resource "aws_instance" "instance" {
     Name = element(var.components, count.index)
   }
 }
-*/
+
 
 resource "aws_security_group" "allow_tls" {
     count = length(var.components)
