@@ -47,6 +47,12 @@ variable "fruit_stock_with_price" {
     }
 }
 
+output "fruit_name_4" {
+    value = var.fruit_stock_with_price["banana"].price
+}
+
+
+
 /*
 ## Access a list variable, List index starts from zero
 output "fruits_first" {
