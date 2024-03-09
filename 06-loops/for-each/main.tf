@@ -1,6 +1,6 @@
 variable "components" {
     default = {
-        shipping = {name = "shipping-sg"}
+        shipping = {name = ""}
         redis = { name= "redis_sg" }
         catalogue = { name = "catalogue_sg" }
         frontend = { name = "frontend_sg" }
