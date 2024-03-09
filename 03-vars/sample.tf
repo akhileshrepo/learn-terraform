@@ -3,10 +3,6 @@ variable "fruit_name" {
     default = "apple"
 }
 
-output "fruit_name_1" {
-    value = var.fruit_name
-}
-
 
 
 # List Variable
@@ -15,9 +11,6 @@ variable "fruits" {
      //default = [ "apple", "banana" ] // Single line syntax
 }
 
-output "fruit_name_2" {
-    value = var.fruits
-}
 
 
 # Map Variable , Plain
@@ -28,9 +21,6 @@ variable "fruit_stock" {
     }
 }
 
-output "fruit_name_3" {
-    value = var.fruit_stock["banana"]
-}
 
 
 # Map Variable, Map of Maps
@@ -47,23 +37,6 @@ variable "fruit_stock_with_price" {
     }
 }
 
-output "fruit_name_4" {
-    value = var.fruit_stock_with_price["banana"].price
-}
-
-variable "fruit_stock_map" {
-    default = {
-        fruits = {
-            stock = 100
-            type = false
-            Brand = "washington"
-        }
-    }
-}
-
-output "fruit_name_5" {
-    value = var.fruit_stock_map["fruits"].Brand
-}
 
 /*
 ## Access a list variable, List index starts from zero
