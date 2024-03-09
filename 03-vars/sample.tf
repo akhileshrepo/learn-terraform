@@ -28,6 +28,10 @@ variable "fruit_stock" {
     }
 }
 
+output "fruit_name_3" {
+    value = var.fruit_stock["apple"]
+}
+
 
 # Map Variable, Map of Maps
 variable "fruit_stock_with_price" {
