@@ -16,16 +16,16 @@ variable "zone_id" {
 
 variable "components" {
   default = {
-    frontend = {}
-    mongodb = {}
-    catalogue = {}
-    redis = {}
-    user = {}
-    cart = {}
-    rabbitmq = {}
-    mysql = {}
-    shipping = {}
-    payment = {}
+    frontend = { name = "frontend-dev"}
+    mongodb = { name = "mongodb-dev"}
+    catalogue = { name = "catalogue-dev"}
+    redis = { name = "redis-dev"}
+    user = { name = "user-dev"}
+    cart = { name = "cart-dev"}
+    rabbitmq = { name = "rabbitmq-dev"}
+    mysql = { name = "mysql-dev"}
+    shipping = { name = "shipping-dev"}
+    payment = { name = "payment-dev"}
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_instance" "instance" {
   for_each = var.components
 
   tags = {
-    Name = lookup(each.key, null)
+    Name = lookup(each.value, "name", null)
   }
 }
 
