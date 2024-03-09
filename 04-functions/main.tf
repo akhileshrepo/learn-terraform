@@ -17,12 +17,6 @@ variable "fruit_with_stock" {
     }
 }
 
-output "test" {
-    //value = try(var.fruit_with_stock["apple"].stock, 0)
-    value = lookup(var.fruit_with_stock["apple"], "price", 100)
-}
-
-
 
 /*
 output "fruit_stock_price" {
