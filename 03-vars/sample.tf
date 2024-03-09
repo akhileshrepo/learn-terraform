@@ -51,7 +51,19 @@ output "fruit_name_4" {
     value = var.fruit_stock_with_price["banana"].price
 }
 
+variable "fruit_stock_map" {
+    default = {
+        fruits = {
+            stock = 100
+            type = false
+            Brand = "washington"
+        }
+    }
+}
 
+output "fruit_name_5" {
+    value = var.fruit_stock_map["fruits"].Brand
+}
 
 /*
 ## Access a list variable, List index starts from zero
