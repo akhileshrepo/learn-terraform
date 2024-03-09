@@ -42,3 +42,8 @@ resource "aws_instance" "instance" {
     Name = lookup(each.value, "name", null)
   }
 }
+
+
+output "EC2" {
+  value = aws_instance.instance
+}
