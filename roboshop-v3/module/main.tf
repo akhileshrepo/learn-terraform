@@ -30,7 +30,7 @@ resource "null_resource" "ansible" {
     command = <<EOF
 cd /home/centos/roboshop-ansible
 git pull
-sleep 30                ##Instance will take sometime for bootstrap
+sleep 30                                          ##Instance will take sometime for bootstrap
 ansible-playbook -i ${var.name}-dev.akhildevops.online, main.yml -e ansible_user=centos -e ansible_password=DevOps321 -e component = ${var.name}
 EOF
   }
