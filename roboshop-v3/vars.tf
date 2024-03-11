@@ -1,5 +1,5 @@
 variable "security_groups" {
-  default = "sg-0e9e01d2f78b0dd9a"
+  default = ["sg-0e9e01d2f78b0dd9a"]
 }
 
 
