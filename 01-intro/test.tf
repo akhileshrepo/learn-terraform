@@ -1,4 +1,4 @@
 output "validate" {
-    value = "Akhilesh is SRE"
+    value = "welcome to aws"
 }
 
