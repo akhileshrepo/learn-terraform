@@ -1,9 +1,9 @@
 resource "aws_instance" "frontend" {
+  for_each = var.components
   ami           = var.ami
   instance_type = var.instance_type
   vpc_security_group_ids = var.security_group
 
-  for_each = each.value["components"]
 
   tags = {
     Name = lookup(each.value, "name", null)
