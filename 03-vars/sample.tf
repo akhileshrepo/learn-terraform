@@ -1,8 +1,8 @@
-# Plain Variable
-variable "fruit_name" {
+# plain variable
+
+variable "fruit" {
     default = "apple"
 }
-
 
 
 # List Variable
