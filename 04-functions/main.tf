@@ -9,7 +9,7 @@ output "fruit" {
 }
 */
 
-output "fruits" {
+output "apple_stock" {
     value = try(var.fruit_with_stock["apple"].stock, 500)
 }
 
