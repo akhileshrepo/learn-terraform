@@ -28,7 +28,7 @@ variable "cooler_name" {
 }
 
 output "print_LG_cooler_cost" {
-    value = var.cooler_name[LG]
+    value = var.cooler_name
 }
 
 # Map variable - Map of Maps
@@ -41,5 +41,5 @@ variable "servers" {
 }
 
 output "print_server_frontend" {
-    value = var.servers[Frontend].name
+    value = var.servers
 }
