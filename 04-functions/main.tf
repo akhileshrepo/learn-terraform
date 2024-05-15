@@ -10,7 +10,8 @@ output "fruit" {
 */
 
 output "apple_stock" {
-    value = try(var.fruit_with_stock["apple"].stock, 1000)
+#    value = try(var.fruit_with_stock["apple"].stock, 1000)
+    value = lookup(var.fruit_with_stock["apple"], "stock", 1000)
 }
 
 
