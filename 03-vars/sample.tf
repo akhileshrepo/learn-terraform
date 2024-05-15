@@ -52,6 +52,8 @@ variable "data_types" {
     }
 }
 
+# If you're accessing variable in combination with string, should use - ${}
+
 output "print_fruit" {
     value = " Fruit sale is ${var.data_types["apple"].for_sale}"
 }
