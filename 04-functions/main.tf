@@ -9,6 +9,12 @@ output "fruit" {
 }
 */
 
+output "fruits" {
+    value = try(var.fruit_with_stock["banana"], 0)
+}
+
+
+
 variable "fruit_with_stock" {
     default = {
         apple = {
