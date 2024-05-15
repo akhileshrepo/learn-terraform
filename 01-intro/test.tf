@@ -1,4 +1,4 @@
 output "validate" {
-    value = "welcome to aws"
+    value = "welcome to aws account"
 }
 
