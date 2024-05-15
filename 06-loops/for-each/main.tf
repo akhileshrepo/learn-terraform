@@ -1,6 +1,6 @@
 variable "components" {
     default = {
-        shipping = {name = ""}
+        shipping = {name = "frontend_sg" }
         redis = { name= "redis_sg" }
         catalogue = { name = "catalogue_sg" }
         frontend = { name = "frontend_sg" }
@@ -11,5 +11,5 @@ variable "components" {
 
 resource "aws_security_group" "allow_tls" {
     for_each = var.components
-    name = lookup(each.value, "name", 0)
+    name = lookup(each.value, "name", null)
 }
