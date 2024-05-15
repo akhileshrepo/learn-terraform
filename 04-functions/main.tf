@@ -10,7 +10,7 @@ output "fruit" {
 */
 
 output "fruits" {
-    value = try(var.fruit_with_stock["banana"], 0)
+    value = try(var.fruit_with_stock["banana"], null)
 }
 
 
