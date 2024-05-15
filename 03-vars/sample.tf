@@ -4,9 +4,9 @@ variable "fruit_name" {
     default = "apple"
 }
 
-output "print_fruit_name" {
-    value = var.fruit_name
-}
+#output "print_fruit_name" {
+#    value = var.fruit_name
+#}
 
 # List variable
 
@@ -14,9 +14,9 @@ variable "veg_name" {
     default = [ "tomato", "potato", "onions"]
 }
 
-output "print_veg_name" {
-    value = var.veg_name[2]
-}
+#output "print_veg_name" {
+#    value = var.veg_name[2]
+#}
 
 # Map variable - Plain
 
@@ -28,7 +28,7 @@ variable "cooler_name" {
 }
 
 output "print_LG_cooler_cost" {
-    value = var.cooler_name
+    value = var.cooler_name["LG"]
 }
 
 # Map variable - Map of Maps
@@ -40,6 +40,6 @@ variable "servers" {
     }
 }
 
-output "print_server_frontend" {
-    value = var.servers
-}
+#output "print_server_frontend" {
+#    value = var.servers
+#}
