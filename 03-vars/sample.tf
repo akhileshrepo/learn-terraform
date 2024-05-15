@@ -52,6 +52,6 @@ variable "data_types" {
     }
 }
 
-output "print_data_types" {
+output "print_fruit" {
     value = "Print Fruit type - ${var.data_types["apple"].type}"
 }
