@@ -43,3 +43,15 @@ variable "servers" {
 output "print_server_frontend" {
     value = var.servers["Catalogue"].name
 }
+
+# variable - Data types
+
+variable "data_types" {
+    default = {
+        apple = { stock=100, for_sale=true, type="washington"}
+    }
+}
+
+output "print_data_types" {
+    value = "Print Fruit type - ${var.data_types["apple"].type}"
+}
