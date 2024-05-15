@@ -12,6 +12,6 @@ resource "aws_route53_record" "www" {
   name    = "frontend-dev.akhildevops.online"
   type    = "A"
   ttl     = 30
-  records = aws_instance.frontend.private_ip
+  records = "aws_instance.frontend.private_ip"
 }
 
