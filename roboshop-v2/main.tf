@@ -27,3 +27,15 @@ variable "components" {
     frontend = { name = "frontend-dev" }
   }
 }
+
+variable "zone_id" {
+  default = "Z0929615AH1MSD5PXATC"
+}
+
+resource "aws_route53_record" "instances" {
+  zone_id = var.zone_id
+  name    = "${var.components["frontend"].name}.akhildevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [ aws_instance.instances.private_ip ]
+}
