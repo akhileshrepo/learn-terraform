@@ -15,7 +15,7 @@ variable "veg_name" {
 }
 
 output "print_veg_name" {
-    value = var.veg_name[1]
+    value = var.veg_name[10]
 }
 
 # Map variable - Plain
