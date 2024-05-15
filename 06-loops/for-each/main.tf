@@ -1,15 +1,12 @@
 variable "components" {
     default = {
-        shipping = {name = "frontend_sg" }
-        redis = { name= "redis_sg" }
-        catalogue = { name = "catalogue_sg" }
-        frontend = { name = "frontend_sg" }
-        mongodb   = { name = "mongodb_sg" }
+        frontend = { name = "frontend" }
+        catalogue = { name = "mongodb" }
+        mysql = { name = "mysql" }
     }
 }
 
-
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "security_group" {
     for_each = var.components
     name = lookup(each.value, "name", null)
 }
