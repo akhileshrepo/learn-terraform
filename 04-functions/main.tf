@@ -18,7 +18,6 @@ output "apple_stock" {
 variable "fruit_with_stock" {
     default = {
         apple = {
-            stock = 100
             price = 500
         }
     }
