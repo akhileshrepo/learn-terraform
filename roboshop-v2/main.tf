@@ -33,6 +33,7 @@ variable "zone_id" {
 }
 
 resource "aws_route53_record" "instances" {
+  for_each        = var.components
   zone_id = var.zone_id
   name    = "${var.components["frontend"].name}.akhildevops.online"
   type    = "A"
