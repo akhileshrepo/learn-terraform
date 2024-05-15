@@ -21,5 +21,5 @@ resource "aws_instance" "instances" {
 resource "aws_security_group" "allow_tls" {
   count = length(var.components)
 
-  name = element(var.components, "count.index", null )
+  name = element(var.components, count.index, null )
 }
