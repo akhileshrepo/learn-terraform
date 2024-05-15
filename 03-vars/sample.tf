@@ -41,5 +41,5 @@ variable "servers" {
 }
 
 output "print_server_frontend" {
-    value = var.servers["Frontend"].name
+    value = var.servers["Catalogue"].name
 }
