@@ -39,7 +39,7 @@ variable "zone_id" {
 resource "aws_route53_record" "records" {
   for_each = var.components
   zone_id = var.zone_id
-  name    = "${lookup(each.value, "name", null )}.akhildevops.online"
+  name    = "${lookup(each.value, "name", null)}.akhildevops.online"
   type    = "A"
   ttl     = 30
   records = [lookup(lookup(aws_instance.instances, each.key, null ), "private_ip", null)]
