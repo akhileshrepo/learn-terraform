@@ -32,7 +32,7 @@ variable "zone_id" {
   default = "Z0929615AH1MSD5PXATC"
 }
 
-resource "aws_route53_record" "instances" {
+resource "aws_route53_record" "records" {
   for_each = var.components
   zone_id = var.zone_id
   name    = "${lookup(each.value, "name", null )}.akhildevops.online"
