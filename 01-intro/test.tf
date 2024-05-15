@@ -1,4 +1,3 @@
-output "validate" {
-    value = "welcome to aws account"
+output "ec2" {
+  default = "Welcome to Google"
 }
-
