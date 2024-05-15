@@ -1,3 +1,3 @@
 output "ec2" {
-  default = "Welcome to Google"
+  value = "Welcome to Google"
 }
