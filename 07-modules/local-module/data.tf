@@ -5,7 +5,14 @@ data "aws_ami" "ami" {
 }
 
 
-output "test" {
-  value = data.aws_ami.ami
+resource "aws_instance" "instances" {
+  ami           = var.ami
+  instance_type = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group_ids
 }
 
+variable "instance_type" {}
+
+variable "ami" {}
+
+variable "vpc_security_group_ids" {}
