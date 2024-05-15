@@ -53,5 +53,5 @@ variable "data_types" {
 }
 
 output "print_fruit" {
-    value = " Fruit sale is ${var.data_types["apple"].for_sle}"
+    value = " Fruit sale is ${var.data_types["apple"].for_sale}"
 }
