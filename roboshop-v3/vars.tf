@@ -10,14 +10,14 @@ variable "components" {
   default = {
     frontend = {
       name = "frontend"
-      instance_type = "t2.micro"
+      instance_type = "t3.micro"
     }
     mongodb = {
       name = "mongodb"
-      instance_type = "t2.micro"
+      instance_type = "t3.micro"
     }
     catalogue = {
-      instance_type = "t2.micro"
+      instance_type = "t3.micro"
       name = "catalogue"
     }
   }
