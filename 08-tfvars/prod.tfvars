@@ -1,1 +1,1 @@
-test = "Hello from Prod"
+instance_type="t2.small"
