@@ -6,11 +6,13 @@ terraform {
   }
 }
 
-variable "test" {}
+variable "test" {
+  default = "apple"
+}
 
 output "test" {
   value = var.test
 }
 
-test = "apple"
+
 
