@@ -1,3 +1,3 @@
-output "ec2" {
-  value = "Welcome to Google"
+output "message" {
+  value = "My name is Akhilesh"
 }
