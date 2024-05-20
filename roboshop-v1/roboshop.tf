@@ -4,7 +4,7 @@ resource "aws_instance" "frontend" {
   vpc_security_group_ids = ["sg-0e9e01d2f78b0dd9a"]
 
   tags = {
-    Name = "Frontend"
+    Name = "Mongodb"
   }
 }
 
