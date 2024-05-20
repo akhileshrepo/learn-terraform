@@ -1,23 +1,8 @@
-resource "google_compute_instance" "default" {
-  name         = "test"
-  machine_type = "e2-medium"
-  zone         = "asia-south1-a"
+resource "aws_instance" "web" {
+  ami           = "ami-0f3c7d07486cad139"
+  instance_type = "t2.micro"
 
-  tags = ["foo", "bar"]
-
-  boot_disk {
-    initialize_params {
-      image  = "CentOS Stream 8"
-      labels = {
-        my_label = "value"
-      }
-    }
-  }
-  network_interface {
-    network = "default"
-
-    access_config {
-      // Ephemeral public IP
-    }
+  tags = {
+    Name = "server"
   }
 }
