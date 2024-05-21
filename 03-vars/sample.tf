@@ -28,8 +28,12 @@ variable "test" {
     }
 }
 
-output "test" {
+output "fruit_stock_name" {
     value = var.test["fruit_name"]
+}
+
+output "fruit_stock_number" {
+    value = var.test["quantity"]
 }
 
 
