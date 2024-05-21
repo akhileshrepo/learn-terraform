@@ -1,7 +1,7 @@
 variable "components" {
     default = {
-        frontend = { name = "mongodb-dev", type = "t2.micro"}
-        mongodb  = { name = "frontend-dev", type = "t2.micro" }
+        mongodb = { name = "mongodb-dev", type = "t2.micro"}
+        frontend  = { name = "frontend-dev", type = "t2.micro" }
     }
 }
 
