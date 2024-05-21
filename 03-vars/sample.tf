@@ -50,17 +50,18 @@ output "cars" {
 }
 
 
-
 ## variable - Data types
-#
-#variable "data_types" {
-#    default = {
-#        apple = { stock=100, for_sale=true, type="washington"}
-#    }
-#}
-#
+
+variable "fruits" {
+    default = {
+        name = "apple"
+        brand = "washington"
+        for_sale = true
+    }
+}
+
+output "fruits" {
+    value = var.fruits["name"]
+}
+
 ## If you're accessing variable in combination with string, should use - ${}
-#
-#output "print_fruit" {
-#    value = " Fruit sale is ${var.data_types["apple"].for_sale}, Fruit Type = ${var.data_types["apple"].type}"
-#}
