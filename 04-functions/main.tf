@@ -3,7 +3,7 @@ variable "fruits" {
 }
 
 output "fruits" {
-    value = var.fruits[5]
+    value = var.fruits[1]
 }
 
 
