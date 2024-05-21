@@ -65,3 +65,7 @@ output "fruits" {
 }
 
 ## If you're accessing variable in combination with string, should use - ${}
+
+output "message" {
+    value = "Fruit name is ${var.fruits["name"]}, Fruit brand is ${var.fruits["brand"]}, sale is ${var.fruits["for_sale"]}"
+}
