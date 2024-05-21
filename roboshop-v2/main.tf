@@ -1,6 +1,6 @@
 resource "aws_instance" "instances" {
   for_each      = var.components
-  ami           = var.ami
+  ami           = data.aws_ami.ami
   instance_type = lookup(each.value, "instance_type", null)
   vpc_security_group_ids = var.security_groups
 
@@ -19,8 +19,11 @@ resource "aws_route53_record" "records" {
 }
 
 
-
-
+data "aws_ami" "ami" {
+  most_recent = true
+  name_regex  = "Centos-8-DevOps-Practice"
+  owners      = ["973714476881"]
+}
 
 
 
