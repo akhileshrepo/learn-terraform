@@ -20,5 +20,5 @@ variable "fruit_with_stock" {
 }
 
 output "fruit_with_stock" {
-    value = lookup(lookup(var.fruit_with_stock, "apple", null), "type", null)
+    value = lookup(lookup(var.fruit_with_stock, "apple"), "type", null)
 }
