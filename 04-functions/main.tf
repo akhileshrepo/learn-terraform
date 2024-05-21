@@ -14,10 +14,11 @@ variable "fruit_with_stock" {
     default = {
         apple = {
             price = 500
+            type = "washington"
         }
     }
 }
 
 output "fruit_with_stock" {
-    value = lookup(lookup(var.fruit_with_stock, "apple", null), "price", 1000)
+    value = lookup(lookup(var.fruit_with_stock, "apple", null), "type", null)
 }
