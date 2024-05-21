@@ -36,21 +36,21 @@ output "fruit_stock_number" {
     value = var.test["quantity"]
 }
 
+# Map variable - Map of Maps
+
+variable "cars" {
+    default = {
+        Nexa ={ name="nexa", model="GDSJSB2541", type="rooftop"}
+        Alto ={ name="alto", model="GDSJSB65541", type="sunroof"}
+    }
+}
+
+output "cars" {
+    value = var.cars["Alto"].type
+}
 
 
-## Map variable - Map of Maps
-#
-#variable "servers" {
-#    default = {
-#        Frontend = { name = "frontend", type = "t2.micro" }
-#        Catalogue = { name = "catalogue", type = "t2.micro"}
-#    }
-#}
-#
-#output "print_server_frontend" {
-#    value = var.servers["Catalogue"].name
-#}
-#
+
 ## variable - Data types
 #
 #variable "data_types" {
