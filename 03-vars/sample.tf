@@ -69,3 +69,4 @@ output "fruits" {
 output "message" {
     value = "Car name is ${var.cars["Nexa"].name}, Car model is ${var.cars["Nexa"].model}, type is ${var.cars["Nexa"].type}"
 }
+
