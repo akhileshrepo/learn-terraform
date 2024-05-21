@@ -11,7 +11,7 @@ output "fruit_name" {
 # List variable
 
 variable "veg_name" {
-    default = ["apple", "tomato", "carrot", "potato"]
+    default = ["neem", "tomato", "carrot", "potato"]
 }
 
 output "veg_name" {
