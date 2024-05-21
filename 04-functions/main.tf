@@ -12,7 +12,7 @@ output "fruits" {
 
 variable "fruit_with_stock" {
     default = {
-        pineapple = {
+        apple = {
             price = 500
             type = "washington"
         }
