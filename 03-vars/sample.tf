@@ -17,19 +17,23 @@ variable "veg_name" {
 output "veg_name" {
     value = var.veg_name[0]
 }
-## Map variable - Plain
-#
-#variable "cooler_name" {
-#    default = {
-#        LG = 5000
-#        sonata = 15000
-#    }
-#}
-#
-#output "print_LG_cooler_cost" {
-#    value = var.cooler_name["LG"]
-#}
-#
+
+#Map variable
+
+variable "test" {
+    default = {
+        fruit_name = "apple"
+        quantity   = 100
+        for_sale   = true
+    }
+}
+
+output "test" {
+    value = "Fruit name is {fruit_name}, quantity is {quantity}, for_sale is {for_sale}"
+}
+
+
+
 ## Map variable - Map of Maps
 #
 #variable "servers" {
