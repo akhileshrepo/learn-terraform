@@ -29,7 +29,7 @@ variable "test" {
 }
 
 output "test" {
-    value = "Fruit name is {fruit_name}, quantity is {quantity}, for_sale is {for_sale}"
+    value = var.test["fruit_name"]
 }
 
 
