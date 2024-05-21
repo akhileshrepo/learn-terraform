@@ -13,3 +13,7 @@ resource "aws_instance" "instances" {
   }
 }
 
+resource "aws_security_group" "sg" {
+  count = length(var.component)
+  name = element(var.component, count.index)
+}
