@@ -33,6 +33,10 @@ output "mouse" {
     value = var.mouse
 }
 
+output "mouse1" {
+    value = var.mouse["mouse1"]
+}
+
 
 
 
