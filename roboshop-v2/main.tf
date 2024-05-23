@@ -47,5 +47,5 @@ resource "aws_route53_record" "records" {
 }
 
 variable "zone_id" {
-  default = "Z0929615AH1MSD5PXATC"
+  default = "Z0960498ESFBGU8CHXSW"
 }
