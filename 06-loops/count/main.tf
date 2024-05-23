@@ -1,19 +1,22 @@
-variable "component" {
-  default = ["catalogue", "mongodb", "frontend"]
-}
-
-resource "aws_instance" "instances" {
-  count         = length(var.component)
-  ami           = "ami-0f3c7d07486cad139"
-  instance_type = "t2.micro"
-  vpc_security_group_ids = ["sg-0e9e01d2f78b0dd9a"]
-
-  tags = {
-    name = element(var.component, count.index)
+variable "components" {
+  default = {
+    frontend = {
+      name = "frontend-dev"
+      type = "t2.micro"
+    }
+    mongodb = {
+      name = "mongodb-dev"
+      type = "t2.micro"
+    }
   }
 }
 
-resource "aws_security_group" "sg" {
-  count = length(var.component)
-  name = element(var.component, count.index)
+resource "aws_instance" "instances" {
+  for_each = var.components
+  ami           = "ami-0f3c7d07486cad139"
+  instance_type = lookup(lookup(var.components, each.value), "type", null)
+
+  tags = {
+    Name = lookup(lookup(var.components, each.value), "name", null)
+  }
 }
