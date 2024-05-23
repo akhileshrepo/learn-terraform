@@ -38,6 +38,19 @@ output "mouse1" {
 }
 
 
+# Map of maps variable
+
+variable "fruit" {
+    default = {
+        apple = { name = "apple", type = "washington"}
+        pineapple = { name = "pineapple", type = "simla"}
+        guava    = { name = "guava", type = "thyroid"}
+    }
+}
+
+output "fruit" {
+    value = var.fruit
+}
 
 
 
@@ -50,24 +63,6 @@ output "mouse1" {
 
 
 
-
-
-
-
-## Map variable - Map of Maps
-#
-#variable "cars" {
-#    default = {
-#        Nexa ={ name="nexa", model="GDSJSB2541", type="rooftop"}
-#        Alto ={ name="alto", model="GDSJSB65541", type="sunroof"}
-#    }
-#}
-#
-#output "cars" {
-#    value = var.cars["Alto"].type
-#}
-#
-#
 ### variable - Data types
 #
 #variable "fruits" {
