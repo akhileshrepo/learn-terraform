@@ -14,9 +14,9 @@ variable "components" {
 resource "aws_instance" "instances" {
   for_each = var.components
   ami           = "ami-0f3c7d07486cad139"
-  instance_type = lookup(var.components, each.value["instance_type"], null)
+  instance_type = lookup(each.value, "instance_type", null)
 
   tags = {
-    Name = lookup(var.components, each.value["name"], null)
+    Name = lookup(each.value, "name", null)
   }
 }
