@@ -19,6 +19,6 @@ variable "laptop" {
 
 output "laptop" {
 #    value = lookup(lookup(var.laptop, "samsung", null), "type", null)
-    value = try(var.laptop, ["samsung"].type, null)
+    value = try(var.laptop["samsung"].type, null)
 }
 
