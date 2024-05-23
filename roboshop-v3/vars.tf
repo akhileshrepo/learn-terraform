@@ -1,6 +1,6 @@
 
 variable "vpc_security_group_ids" {
-  default = "sg-00367da009690cd34"
+  default = ["sg-00367da009690cd34"]
 }
 variable "components" {
   default = {
