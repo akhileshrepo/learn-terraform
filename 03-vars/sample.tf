@@ -66,8 +66,8 @@ variable "datatype" {
     }
 }
 
-output "datatype" {
-    value = var.datatype
+output "fruit_sale" {
+    value = var.datatype["fruit_sale"]
 }
 
 
