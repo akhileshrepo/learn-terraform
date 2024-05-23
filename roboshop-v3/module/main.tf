@@ -25,7 +25,7 @@ resource "null_resource" "ansible" {
 cd /home/centos/ansible
 git pull
 sleep 30
-ansible-playbook -i ${var.name}.vinithaws.online -e ansible_user=centos -e ansible_password=DevOps321 main.yml -e component=${var.name}
+ansible-playbook -i ${var.name}.vinithaws.online, -e ansible_user=centos -e ansible_password=DevOps321 main.yml -e component=${var.name}
 EOF
   }
 }
