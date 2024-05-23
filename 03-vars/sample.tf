@@ -71,9 +71,8 @@ output "fruit_sale" {
 }
 
 
-### If you're accessing variable in combination with string, should use - ${}
-#
-#output "message" {
-#    value = "Car name is ${var.cars["Nexa"].name}, Car model is ${var.cars["Nexa"].model}, type is ${var.cars["Nexa"].type}"
-#}
+# If you're accessing variable in combination with string, should use - ${}
 
+output "fruit_message" {
+    value = "Fruit Name is ${var.fruit["apple"].name}, Fruit Type is ${var.fruit["pineapple"].type}, Fruit Quantity is ${var.datatype["fruit_quantity"]}, Fruit Sale is ${var.datatype["fruit_sale"]}"
+}
