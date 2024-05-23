@@ -52,6 +52,10 @@ output "fruit" {
     value = var.fruit
 }
 
+output "fruit_apple" {
+    value = var.fruit["apple"].name
+}
+
 
 
 
