@@ -22,15 +22,15 @@ variable "vpc_security_group_ids" {
 variable "components" {
   default = {
     frontend ={
-      name = frontend-dev
+      name = "frontend-dev"
       type = "t2.micro"
     }
     mongodb ={
-      name = mongodb-dev
+      name = "mongodb-dev"
       type = "t2.micro"
     }
     catalogue ={
-      name = catalogue-dev
+      name = "catalogue-dev"
       type = "t2.micro"
     }
   }
