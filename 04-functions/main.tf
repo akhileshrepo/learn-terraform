@@ -3,6 +3,6 @@ variable "fruit_name" {
 }
 
 output "fruit_name" {
-    value = element(var.fruit_name, 2)
+    value = try(var.fruit_name, 2, null)
 }
 
