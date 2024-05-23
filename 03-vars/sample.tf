@@ -8,19 +8,17 @@ output "fruit_name" {
     value = var.fruit_name
 }
 
+# List variable
+
+variable "laptop" {
+    default = ["hp", "samsung", "DELL"]
+}
+
+output "laptop" {
+    value = var.laptop
+}
 
 
-
-## List variable
-#
-#variable "veg_name" {
-#    default = ["neem", "tomato", "carrot", "potato"]
-#}
-#
-#output "veg_name" {
-#    value = var.veg_name[0]
-#}
-#
 ##Map variable
 #
 #variable "test" {
