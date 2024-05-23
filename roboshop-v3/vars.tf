@@ -10,7 +10,7 @@ variable "components" {
     }
     mongodb = {
       name = "mongodb-dev"
-      type = "t2.micro"
+      instance_type = "t2.micro"
     }
     catalogue = {
       name = "catalogue-dev"
