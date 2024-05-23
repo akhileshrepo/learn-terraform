@@ -3,6 +3,21 @@ variable "fruit_name" {
 }
 
 output "fruit_name" {
-    value = try(var.fruit_name, 2, null)
+    value = element(var.fruit_name, 2)
+}
+
+variable "laptop" {
+    default = {
+        samsung = {
+            name = "samsung-dev", type = "andriod", model = 2015
+        }
+        lenovo = {
+            name = "lenovo-dev", type = "snapdragon", model = 2018
+        }
+    }
+}
+
+output "laptop" {
+    value = lookup(lookup(var.laptop, "samsung", null), "type", null)
 }
 
