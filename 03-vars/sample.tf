@@ -19,24 +19,37 @@ output "laptop" {
 }
 
 
-##Map variable
-#
-#variable "test" {
-#    default = {
-#        fruit_name = "apple"
-#        quantity   = 100
-#        for_sale   = true
-#    }
-#}
-#
-#output "fruit_stock_name" {
-#    value = var.test["fruit_name"]
-#}
-#
-#output "fruit_stock_number" {
-#    value = var.test["quantity"]
-#}
-#
+# Map variable
+
+variable "mouse" {
+    default = {
+        mouse1 = "hp"
+        mouse2 = "lenovo"
+        mouse3 = "samsung"
+    }
+}
+
+output "mouse" {
+    value = var.mouse
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Map variable - Map of Maps
 #
 #variable "cars" {
