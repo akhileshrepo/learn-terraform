@@ -5,3 +5,4 @@ variable "fruit_name" {
 output "fruit_name" {
     value = element(var.fruit_name, count.index)
 }
+
