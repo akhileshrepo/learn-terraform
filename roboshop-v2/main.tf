@@ -36,3 +36,16 @@ variable "components" {
     }
   }
 }
+
+resource "aws_route53_record" "records" {
+  for_each  = var.components
+  name      = "${each.value, "name", null}.akhildevops.online"
+  type      = "A"
+  zone_id   = var.zone_id
+  ttl       = 30
+  records   = lookup(lookup(aws_instance.instances, each.key), "private_ip", null)
+}
+
+variable "zone_id" {
+  default = "Z0929615AH1MSD5PXATC"
+}
