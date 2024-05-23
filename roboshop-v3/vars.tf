@@ -16,6 +16,34 @@ variable "components" {
       name = "catalogue-dev"
       instance_type = "t2.micro"
     }
+    redis = {
+      name = "redis-dev"
+      instance_type = "t2.micro"
+    }
+    user = {
+      name = "user-dev"
+      instance_type = "t2.micro"
+    }
+    cart = {
+      name = "cart-dev"
+      instance_type = "t2.micro"
+    }
+    mysql = {
+      name = "mysql-dev"
+      instance_type = "t2.micro"
+    }
+    rabbitmq = {
+      name = "rabbitmq-dev"
+      instance_type = "t2.micro"
+    }
+    shipping = {
+      name = "shipping-dev"
+      instance_type = "t2.micro"
+    }
+    payment = {
+      name = "payment-dev"
+      instance_type = "t2.micro"
+    }
   }
 }
 
