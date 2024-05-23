@@ -3,7 +3,6 @@ variable "fruit_name" {
 }
 
 output "fruit_name" {
-    count = 2
-    value = element(var.fruit_name, count.index)
+    value = element(var.fruit_name, 2)
 }
 
