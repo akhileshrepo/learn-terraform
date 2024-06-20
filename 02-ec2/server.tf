@@ -7,3 +7,7 @@ resource "aws_instance" "test" {
     Name = "Akhilesh"
   }
 }
+
+output "attribute" {
+  value = aws_instance.test
+}
