@@ -8,3 +8,6 @@ resource "aws_instance" "test" {
   }
 }
 
+data "aws_instance" "test" {
+  private_ip = aws_instance.test.private_ip
+}
