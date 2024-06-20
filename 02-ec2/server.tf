@@ -9,7 +9,7 @@ resource "aws_instance" "test" {
 }
 
 resource "aws_route53_record" "test" {
-  zone_id = Z093842334KRCLE5WWCFA
+  zone_id = "Z093842334KRCLE5WWCFA"
   name    = "frontend-dev.akhildevops.online"
   type    = "A"
   ttl     = 30
