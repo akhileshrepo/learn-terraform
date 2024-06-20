@@ -8,6 +8,3 @@ resource "aws_instance" "test" {
   }
 }
 
-output "attribute" {
-  value = aws_instance.test
-}
