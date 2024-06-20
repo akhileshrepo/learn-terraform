@@ -1,8 +1,7 @@
-variable "message" {
+variable "test" {
   default = "Hello world"
 }
 
 output "message" {
-  value = var.message
+  value = var.test
 }
-
