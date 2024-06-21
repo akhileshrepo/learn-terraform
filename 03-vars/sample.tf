@@ -1,4 +1,4 @@
-# Plain variable
+# Plain variable and Accessing the plain variable
 
 variable "fruits" {
     default = "apple"
@@ -7,6 +7,20 @@ variable "fruits" {
 output "fruits" {
     value = var.fruits
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #
 # # List variable
