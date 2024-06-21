@@ -1,4 +1,4 @@
-# element Function will help in replacing the list values
+# element Function will help in accessing the list values
 
 variable "fruits" {
     default = [ "apple", "pineapple" ]
@@ -9,7 +9,7 @@ output "second_fruit" {
     value = element(var.fruits, 5)
 }
 
-# lookup Function will help in replacing the map values
+# lookup Function will help in accessing the map values
 
 variable "fruits_stock_with_price" {
     default = {
