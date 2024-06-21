@@ -58,5 +58,5 @@ variable "instance_type" {
 }
 
 variable "security_groups" {
-  default = ["sg-0dee954b08055e577"]
+  default = ["sg-0ad8ec6873fafd140"]
 }
