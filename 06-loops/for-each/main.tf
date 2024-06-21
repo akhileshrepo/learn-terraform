@@ -24,3 +24,12 @@ resource "aws_instance" "web" {
         name = lookup(each.value, "name", null)
     }
 }
+
+resource "aws_security_group" "allow_tls" {
+    name        = "allow-all"
+    for_each    = var.components
+
+    tags = {
+        Name = lookup(each.value, "name", null)
+    }
+}
