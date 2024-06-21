@@ -4,7 +4,7 @@ resource "aws_instance" "instances" {
     instance_type = "t2.micro"
 
     tags = {
-        name = lookup(each.value, "name", null)
+        Name = lookup(each.value, "name", null)
     }
 }
 
