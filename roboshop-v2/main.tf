@@ -8,13 +8,13 @@ resource "aws_instance" "web-server" {
   }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "records" {
   for_each = var.components
   zone_id  = var.zone_id
   name     = "${lookup(each.value, "name", null)}.akhildevops.online"
   type     = "A"
   ttl      = 30
-  records  = lookup(lookup(each.value, "name", null), "private_ip", null)
+  records  = [lookup(lookup(each.value, "name", null), "private_ip", null)]
 }
 
 
