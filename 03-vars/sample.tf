@@ -97,17 +97,18 @@ output "fruit_sale_datatype" {
     value = var.data_type["fruit_sale"]
 }
 
+# if you're accessing variable in combination of string. you should access the variable with ${}
+
+variable "devops" {
+    default = "Terraform"
+}
+
+output "welcome_message" {
+    value = "Welcome to ${var.devops}"
+}
 
 
 
 
 
 
-
-
-#
-# # If you're accessing variable in combination with string, should use - ${}
-#
-# output "fruit_message" {
-#     value = "Fruit Name is ${var.fruit["apple"].name}, Fruit Type is ${var.fruit["pineapple"].type}, Fruit Quantity is ${var.datatype["fruit_quantity"]}, Fruit Sale is ${var.datatype["fruit_sale"]}"
-# }
