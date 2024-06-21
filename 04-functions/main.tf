@@ -3,7 +3,8 @@ variable "fruits" {
 }
 
 output "second_fruit" {
-    value = var.fruits[3]
+#     value = var.fruits[3]
+    value = element(var.fruits, 5)
 }
 
 
