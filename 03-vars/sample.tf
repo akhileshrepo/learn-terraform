@@ -36,11 +36,13 @@ output "apple_stock" {
     value = var.fruit_with_stock["apple"]
 }
 
+output "pineapple_stock" {
+    value = var.fruit_with_stock["pineapple"]
+}
 
-
-
-
-
+output "orange_stock" {
+    value = var.fruit_with_stock["orange"]
+}
 
 
 # # Map of maps variable
