@@ -1,3 +1,13 @@
+resource "aws_instance" "instances" {
+    for_each      = var.components
+    ami           = "ami-0b4f379183e5706b9"
+    instance_type = "t2.micro"
+
+    tags = {
+        name = lookup(each.value, "name", null)
+    }
+}
+
 variable "components" {
     default = {
         frontend = {
@@ -9,19 +19,8 @@ variable "components" {
             instance_type = "t2.micro"
         }
         catalogue = {
-            name = "catalogue-dev"
+            name          = "catalogue-dev"
             instance_type = "t2.micro"
         }
-    }
-}
-
-resource "aws_instance" "web" {
-    for_each = var.components
-    ami           = "ami-0b4f379183e5706b9"
-    instance_type = "t2.micro"
-
-
-    tags = {
-        name = lookup(each.value, "name")
     }
 }
