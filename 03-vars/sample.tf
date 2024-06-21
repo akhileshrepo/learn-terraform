@@ -8,7 +8,7 @@ output "fruits" {
     value = var.fruits
 }
 
-# List variable
+# List variable and Accessing the list variable
 
 variable "fruits_list" {
     default = ["apple", "pineapple", "orange"]
@@ -22,25 +22,27 @@ output "second_fruit" {
     value = var.fruits_list[1]
 }
 
-# # Map variable
-#
-# variable "mouse" {
-#     default = {
-#         mouse1 = "hp"
-#         mouse2 = "lenovo"
-#         mouse3 = "samsung"
-#     }
-# }
-#
-# output "mouse" {
-#     value = var.mouse
-# }
-#
-# output "mouse1" {
-#     value = var.mouse["mouse1"]
-# }
-#
-#
+# Map variable and Accessing the map variable
+
+variable "fruit_with_stock" {
+    default = {
+        apple = 100
+        orange = 500
+        pineapple = 1000
+    }
+}
+
+output "apple_stock" {
+    value = var.fruit_with_stock["apple"]
+}
+
+
+
+
+
+
+
+
 # # Map of maps variable
 #
 # variable "fruit" {
