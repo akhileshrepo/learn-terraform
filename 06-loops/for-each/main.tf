@@ -26,7 +26,6 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_security_group" "allow_tls" {
-    name        = "allow-all"
     for_each    = var.components
 
     tags = {
