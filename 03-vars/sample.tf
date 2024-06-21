@@ -93,6 +93,10 @@ output "fruit_stock_datatype" {
     value = var.data_type["fruit_stock"]
 }
 
+output "fruit_sale_datatype" {
+    value = var.data_type["fruit_sale"]
+}
+
 
 
 
