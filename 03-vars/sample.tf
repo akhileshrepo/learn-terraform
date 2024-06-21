@@ -44,25 +44,39 @@ output "orange_stock" {
     value = var.fruit_with_stock["orange"]
 }
 
+# Map of maps variable and Accessing the Map of Maps
 
-# # Map of maps variable
-#
-# variable "fruit" {
-#     default = {
-#         apple = { name = "apple", type = "washington"}
-#         pineapple = { name = "pineapple", type = "simla"}
-#         guava    = { name = "guava", type = "thyroid"}
-#     }
-# }
-#
-# output "fruit" {
-#     value = var.fruit
-# }
-#
-# output "fruit_apple" {
-#     value = var.fruit["apple"].name
-# }
-#
+variable "fruit_stock_with_price" {
+    default = {
+        apple = {
+            stock = 100
+            price = 50
+        }
+        pineapple = {
+            stock = 500
+            price = 40
+        }
+        orange = {
+            stock = 500
+            price = 30
+        }
+    }
+}
+
+output "apple_price" {
+    value = var.fruit_stock_with_price["apple"].price
+}
+
+
+
+
+
+
+
+
+
+
+
 # # variable - Data type
 #
 # variable "datatype" {
