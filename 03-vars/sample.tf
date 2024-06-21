@@ -14,7 +14,7 @@ variable "fruits_list" {
     default = ["apple", "pineapple", "orange"]
 }
 
-output "laptop" {
+output "first_fruit" {
     value = var.fruits_list[0]
 }
 
