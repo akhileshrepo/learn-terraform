@@ -75,6 +75,19 @@ output "orange_price" {
     value = var.fruit_stock_with_price["orange"].price
 }
 
+# variable Data types - Accessing variable Data type
+
+variable "data_type" {
+    default = {
+        fruit_name = "apple"
+        fruit_stock = 500
+        fruit_sale = true
+    }
+}
+
+output "fruit_name_datatype" {
+    value = var.data_type["fruit_name"]
+}
 
 
 
@@ -84,20 +97,6 @@ output "orange_price" {
 
 
 
-# # variable - Data type
-#
-# variable "datatype" {
-#     default = {
-#         fruit_name = "apple"
-#         fruit_quantity = 100
-#         fruit_sale = true
-#     }
-# }
-#
-# output "fruit_sale" {
-#     value = var.datatype["fruit_sale"]
-# }
-#
 #
 # # If you're accessing variable in combination with string, should use - ${}
 #
