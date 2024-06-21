@@ -1,51 +1,49 @@
-resource "aws_instance" "instances" {
-  for_each        = var.components
-  ami             = data.aws_ami.ami.id
-  instance_type   = lookup(each.value, "type", null)
-  vpc_security_group_ids = var.vpc_security_group_ids
+resource "aws_instance" "web-server" {
+  for_each      = var.components
+  ami           = "ami-0b4f379183e5706b9"
+  instance_type = lookup(each.value, "instance_type", null)
 
   tags = {
     name = lookup(each.value, "name", null)
   }
 }
 
-data "aws_ami" "ami" {
-  most_recent = true
-  name_regex  = "Centos-8-DevOps-Practice"
-  owners      = ["973714476881"]
+resource "aws_route53_record" "www" {
+  for_each = var.components
+  zone_id  = var.zone_id
+  name     = "${lookup(each.value, "name", null)}.akhildevops.online"
+  type     = "A"
+  ttl      = 30
+  records  = lookup(lookup(each.value, "name", null), "private_ip", null)
 }
 
-
-variable "vpc_security_group_ids" {
-  default = ["sg-00367da009690cd34"]
-}
 
 variable "components" {
   default = {
-    frontend ={
+    frontend = {
       name = "frontend-dev"
-      type = "t2.micro"
+      instance_type = "t2.micro"
     }
-    mongodb ={
+    mongodb = {
       name = "mongodb-dev"
-      type = "t2.micro"
+      instance_type = "t2.micro"
     }
-    catalogue ={
+    catalogue = {
       name = "catalogue-dev"
-      type = "t2.micro"
+      instance_type = "t2.micro"
+    }
+    redis = {
+      name = "redis-dev"
+      instance_type = "t2.micro"
+    }
+    user = {
+      name = "user-dev"
+      instance_type = "t2.micro"
     }
   }
 }
 
-resource "aws_route53_record" "records" {
-  for_each  = var.components
-  name      = "${lookup(each.value, "name", null)}.akhildevops.online"
-  type      = "A"
-  zone_id   = var.zone_id
-  ttl       = 30
-  records   = [lookup(lookup(aws_instance.instances, each.key), "private_ip", null)]
+variable "zone_id" {
+  default = "Z093842334KRCLE5WWCFA"
 }
 
-variable "zone_id" {
-  default = "Z0960498ESFBGU8CHXSW"
-}
