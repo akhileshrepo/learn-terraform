@@ -100,11 +100,11 @@ output "fruit_sale_datatype" {
 # if you're accessing variable in combination of string. you should access the variable with ${}
 
 variable "devops" {
-    default = "Terraform"
+    default = [ "Terraform", "Variables"]
 }
 
 output "welcome_message" {
-    value = "Welcome to ${var.devops}"
+    value = "Welcome to ${var.devops[0]}, learn the ${var.devops[1]}"
 }
 
 
