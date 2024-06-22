@@ -1,1 +1,1 @@
-Hello from Prod
+msg = "Hello from prod"
