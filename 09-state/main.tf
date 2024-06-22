@@ -7,7 +7,7 @@ terraform {
 }
 
 variable "car" {
-  default = "Nexa"
+  default = "Audi"
 }
 
 output "car" {
