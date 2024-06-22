@@ -17,6 +17,8 @@ resource "aws_route53_record" "records" {
 }
 
 resource "null_resource" "ansible" {
+  depends_on = [aws_route53_record.records.records]
+
   provisioner "local-exec" {
     command = <<EOF
 cd /home/centos/roboshop-ansible
