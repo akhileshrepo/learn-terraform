@@ -1,1 +1,1 @@
-"Hello from prod"
+message = "Hello from prod"
