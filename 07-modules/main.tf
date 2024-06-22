@@ -4,9 +4,6 @@ module "test" {
     instance_type           = var.instance_type
 }
 
-
-
-
 variable "vpc_security_group_ids" {
     default = ["sg-0e9e01d2f78b0dd9a"]
 }
