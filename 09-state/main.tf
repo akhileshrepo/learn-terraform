@@ -1,18 +1,17 @@
 terraform {
   backend "s3" {
-    bucket = "akhildevops.online"
-    key    = "Dev/terraform.tfstate"
+    bucket = "tf-roboshop-state"
+    key    = "env-dev/state.tf"
     region = "us-east-1"
   }
 }
 
-variable "test" {
-  default = "apple"
+variable "car" {
+  default = "Nexa"
 }
 
-output "test" {
-  value = var.test
+output "car" {
+  value = var.car
 }
-
 
 
