@@ -18,7 +18,7 @@ resource "aws_route53_record" "records" {
 
 resource "null_resource" "ansible" {
   provisioner "local-exec" {
-    commands = <<EOF
+    command = <<EOF
 cd /home/centos/roboshop-ansible
 git pull
 sleep 30
