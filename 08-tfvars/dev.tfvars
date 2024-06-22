@@ -1,1 +1,1 @@
-Hello from dev
+message = "Hello from dev"
