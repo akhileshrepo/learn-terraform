@@ -1,5 +1,5 @@
-variable "instance_type" {}
+variable "message" {}
 
 output "test" {
-    value = var.instance_type
+    value = var.message
 }

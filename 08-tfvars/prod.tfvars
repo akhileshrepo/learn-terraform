@@ -1,1 +1,1 @@
-instance_type="t2.small"
+Hello from Prod
