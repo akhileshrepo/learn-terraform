@@ -112,7 +112,7 @@ variable "devops" {
 }
 
 output "devops_newsletter" {
-    value = "Learn skills - ${var.devops[sprint-1]}"
+    value = "Learn skills - ${var.devops["sprint-4"]}"
 }
 
 
