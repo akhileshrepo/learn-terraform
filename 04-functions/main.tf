@@ -28,6 +28,6 @@ output "apple_price" {
 }
 
 output "orange_stock" {
-    value = lookup(lookup(var.fruits, "orange", null), "orange", null)
+    value = lookup(lookup(var.fruits, "orange", null), "stock", null)
 }
 
