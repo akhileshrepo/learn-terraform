@@ -18,10 +18,10 @@ output "first_fruit" {
     value = var.fruits_list[0]
 }
 
-# output "second_fruit" {
-#     value = var.fruits_list[1]
-# }
-#
+output "second_fruit" {
+    value = var.fruits_list[1]
+}
+
 # # Map variable and Accessing the map variable
 #
 # variable "fruit_with_stock" {
