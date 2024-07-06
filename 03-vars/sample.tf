@@ -32,15 +32,15 @@ variable "fruit_stock" {
     }
 }
 
-output "apple_stock" {
+output "fruit_apple_stock" {
     value = var.fruit_stock["apple"]
 }
 
-output "pineapple_stock" {
+output "fruit_pineapple_stock" {
     value = var.fruit_stock["pineapple"]
 }
 
-output "orange_stock" {
+output "fruit_orange_stock" {
     value = var.fruit_stock["orange"]
 }
 
