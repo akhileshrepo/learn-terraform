@@ -40,9 +40,9 @@ output "pineapple_stock" {
     value = var.fruit_stock["pineapple"]
 }
 
-
-
-
+output "orange" {
+    value = var.fruit_stock["orange"]
+}
 
 # # Map of maps variable and Accessing the Map of Maps
 #
