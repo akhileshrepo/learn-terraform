@@ -8,16 +8,16 @@ output "fruits" {
     value = var.fruits
 }
 
-# # List variable and Accessing the list variable
-#
-# variable "fruits_list" {
-#     default = ["apple", "pineapple", "orange"]
-# }
-#
-# output "first_fruit" {
-#     value = var.fruits_list[0]
-# }
-#
+# List variable and Accessing the list variable
+
+variable "fruits_list" {
+    default = ["apple", "pineapple", "orange"]
+}
+
+output "first_fruit" {
+    value = var.fruits_list[0]
+}
+
 # output "second_fruit" {
 #     value = var.fruits_list[1]
 # }
