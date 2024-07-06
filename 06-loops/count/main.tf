@@ -1,14 +1,14 @@
-variable "components" {
-  default = [ "frontend", "mongodb", "catalogue" ]
+variable "fruits" {
+  default = ["apple", "orange", "pineapple"]
 }
 
-resource "aws_instance" "web" {
-  count         = length(var.components)
+resource "aws_instance" "instance" {
+  count         = length(var.fruits)
   ami           = "ami-0b4f379183e5706b9"
   instance_type = "t2.micro"
 
   tags = {
-    name = var.components[count.index]
-#     name = element(var.components, count.index)
+#     Name = var.fruits[count.index]
+    Name = element(var.fruits, count.index+1)
   }
 }
