@@ -4,7 +4,7 @@ variable "Fruits" {
     default = ["apple", "orange", "pineapple"]
 }
 
-output "Fruit_apple" {
+output "Fruit_name" {
     value = element(var.Fruits, 5)
 }
 
