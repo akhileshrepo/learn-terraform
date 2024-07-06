@@ -40,7 +40,7 @@ output "pineapple_stock" {
     value = var.fruit_stock["pineapple"]
 }
 
-output "orange" {
+output "orange_stock" {
     value = var.fruit_stock["orange"]
 }
 
