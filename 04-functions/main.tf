@@ -5,7 +5,7 @@ variable "Fruits" {
 }
 
 output "Fruit_name" {
-    value = element(var.Fruits, 5)
+    value = element(var.Fruits, 0)
 }
 
 # # lookup Function will help in accessing the map values
