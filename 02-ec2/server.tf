@@ -8,7 +8,7 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "record" {
   zone_id = "Z093842334KRCLE5WWCFA"
   name    = "terraform.akhildevops.online"
   type    = "A"
