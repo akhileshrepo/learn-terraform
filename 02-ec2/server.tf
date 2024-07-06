@@ -7,3 +7,11 @@ resource "aws_instance" "instance" {
     Name = "Terraform"
   }
 }
+
+resource "aws_route53_record" "www" {
+  zone_id = "Z093842334KRCLE5WWCFA"
+  name    = "terraform.akhildevops.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.instance.private_ip]
+}
