@@ -78,28 +78,28 @@ output "Fruit_message_pineapple" {
     value = var.Fruit_message["pineapple"].type
 }
 
-# # variable Data types - Accessing variable Data type
-#
-# variable "data_type" {
-#     default = {
-#         fruit_name = "apple"
-#         fruit_stock = 500
-#         fruit_sale = true
-#     }
-# }
-#
-# output "fruit_name_datatype" {
-#     value = var.data_type["fruit_name"]
-# }
-#
-# output "fruit_stock_datatype" {
-#     value = var.data_type["fruit_stock"]
-# }
-#
-# output "fruit_sale_datatype" {
-#     value = var.data_type["fruit_sale"]
-# }
-#
+# variable Data types - Accessing variable Data type
+
+variable "data_type" {
+    default = {
+        fruit_name = "apple"
+        fruit_stock = 500
+        fruit_sale = true
+    }
+}
+
+output "fruit_name_datatype" {
+    value = var.data_type["fruit_name"]
+}
+
+output "fruit_stock_datatype" {
+    value = var.data_type["fruit_stock"]
+}
+
+output "fruit_sale_datatype" {
+    value = var.data_type["fruit_sale"]
+}
+
 # # if you're accessing variable in combination of string. you should access the variable with ${}
 #
 # variable "devops" {
