@@ -9,6 +9,6 @@ resource "aws_instance" "instance" {
 
   tags = {
 #     Name = var.fruits[count.index]
-    Name = element(var.fruits, count.index+1)
+    Name = element(var.fruits, count.index)
   }
 }
